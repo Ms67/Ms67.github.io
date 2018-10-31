@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 生生不息
 subtitle:
-description:
+description: 万物生长 生生不息
 keywords:
-author: John Doe
-language:
+author: Ms67
+language: zh-Hans
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
