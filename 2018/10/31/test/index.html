@@ -197,24 +197,25 @@
 
 <div class="card">
     <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">Komentar</h3>
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
         
-<div id="comment-container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-	var gitment = new Gitment({
-		id: '2018/10/31/test/',
-		owner: 'Ms67',
-		repo: 'gitment-comments',
-		oauth: {
-			client_id: 'fdee41e6c98803d585c8',
-			client_secret: 'db002ba2f0bb557bfadc44a57f61e5e59ee0afa8',
-		},
-	})
-	gitment.render('comment-container')
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/10/31/test/';
+        this.page.identifier = '2018/10/31/test/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'Ms67' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
     </div>
 </div>
 </div>
@@ -254,7 +255,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        pos
+                        Post
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -264,7 +265,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Kategori
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -274,7 +275,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        tag
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
                         2
@@ -284,7 +285,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice">
-                IKUTI</a>
+                Follow</a>
         </div>
         
         
@@ -333,7 +334,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            tautan
+            Links
         </h3>
         <ul class="menu-list">
         
@@ -371,7 +372,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Kategori
+                Categories
             </h3>
             <ul class="menu-list">
             
@@ -384,7 +385,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            awan tag
+            Tag Cloud
         </h3>
         <a href="/tags/人工智能/" style="font-size: 10px;">人工智能</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a>
     </div>
@@ -398,7 +399,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Terbaru
+            Recent
         </h3>
         
         <article class="media">
@@ -428,7 +429,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Arsip
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -452,7 +453,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                tag
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -497,7 +498,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Terbaru
+            Recent
         </h3>
         
         <article class="media">
@@ -527,7 +528,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Arsip
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -551,7 +552,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                tag
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -738,7 +739,7 @@
     
     
 
-<a id="back-to-top" title="回到顶端" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <style>
@@ -780,7 +781,7 @@
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Tulis Sesuatu..">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -792,11 +793,11 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Pos',
-                PAGES: 'Halaman',
-                CATEGORIES: 'Kategori',
-                TAGS: 'Tag',
-                UNTITLED: 'Tanpa Judul',
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
         };
