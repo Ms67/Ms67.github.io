@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
+    <title>Ms67&#39;s Blog | </title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head>
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">Ms67&#39;s Blog</a>
+    <a class="go-home" href="/">
+        <svg width="8" height="14" viewbox="0 0 8 14">
+            <path d="M7 1L1 7l6 6" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+                
+                <div class="post-main">
+
+    
+        <div class="post-main-title">
+            JS构造函数
+        </div>
+        <div class="post-meta">
+            2022-04-22
+        </div>
+    
+
+    <div class="post-md">
+        <p>1.构造函数 –&gt;<strong>类</strong> Fn</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.原型(prototype) –&gt;一个<strong>对象</strong>,也是<strong>构造函数的一个属性</strong>,用于存放类方法和类属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Fn.prototype.skill=functionsayHi()&#123;        <span class="comment">//Fn.prototype = &#123;&#125;</span></span><br><span class="line">consolo.log(<span class="string">'hi'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.对象原型(<em>proto</em>)–&gt;<strong>实例对象</strong>里存的一个<strong>属性</strong>,指向构造函数的原型.(形成原型链,实现继承)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="keyword">new</span> Fn()</span><br><span class="line">a._proto_=== Fn.prototype    <span class="comment">//True</span></span><br></pre></td></tr></table></figure></p>
+<p>4.构造函数 (construter) –&gt;<strong>prototype 里</strong>的一个<strong>属性</strong>,值为’Fn’.用于<strong>手动指定</strong>实例对象的构造函数</p>
+<p>5.原型链<br>由于 Fn.prototype也是一个对象,<strong>也有<em>proto</em>属性</strong>,所以当一个对象在构造函数的prototype里也找不到对应的方法的时候,可以沿着prototype的<em>proto</em>这一属性向上查找.这就叫原型链</p>
+<p>原型链常用于给包装类型添加另外的方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.prototype.reverse=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.split().reverse.jion(<span class="string">''</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a = <span class="string">'hello'</span></span><br><span class="line">a.reverse()  <span class="comment">//输出 'olleh'</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+</div>
+                <div class="footer">
+    <span>Copyright © 2022 Ms67&#39;s Blog</span>
+    <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這Li</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<script src="/js/highlight.min.js"></script>
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>
